@@ -1,0 +1,1 @@
+This is an Election app where you can add and edit voters to a table. this app was created for 0ptimus in Washington DC

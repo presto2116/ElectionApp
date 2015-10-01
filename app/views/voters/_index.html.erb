@@ -1,0 +1,16 @@
+<!-- Index Partial -->
+<!-- loop through voter data and display on index page -->
+
+<% @voters.order("last_name ASC").each do |voter| %>
+      <tr>
+        <td><%= voter.first_name %></td>
+        <td><%= voter.last_name %></td>
+        <td><%= voter.address %></td>
+        <td><%= voter.city %></td>
+        <td><%= voter.state %></td>
+        <td><%= voter.zip %></td>
+        <td><%= link_to 'Show', voter_path(voter), class: "btn btn-default btn-success"%></td>
+        <td><%= link_to 'Edit', edit_voter_path(voter), remote: true, class: "btn btn-warning" %></td>
+        <td><%= link_to "Delete", voter_delete_path(voter), remote: true, class: "btn btn-danger" %></td>
+      </tr>
+<% end %>

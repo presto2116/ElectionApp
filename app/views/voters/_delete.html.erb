@@ -1,0 +1,16 @@
+<!-- Delete Voter Modal Partial -->
+
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Delete <%= @voter.first_name %> <%= @voter.last_name %></h3>
+    </div>
+    <div class="modal-body">
+      Are you sure you wish to delete?
+    </div>
+    <div class="modal-footer">
+      <%= link_to "Yes, Delete This Voter", voter_path(@voter), method: :delete, remote: true, class: "btn btn-danger" %>
+      <%= link_to "No, Please Don't", "#", class: "btn btn-default", data: { dismiss: "modal" } %>
+    </div>
+  </div>
+</div>

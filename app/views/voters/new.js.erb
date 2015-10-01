@@ -1,0 +1,4 @@
+// When New Voter button is clicked, show the new modal partial
+
+	$("#voter-modal").html("<%= escape_javascript(render 'new') %>");
+	$("#voter-modal").modal("show");

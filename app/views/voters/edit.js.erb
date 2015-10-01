@@ -1,0 +1,5 @@
+// When edit button is clicked, show the edit modal partial for given voter
+// the given users fields should be filled in and able to update any information
+
+	$("#voter-modal").html("<%= escape_javascript(render 'edit') %>");
+	$("#voter-modal").modal("show");

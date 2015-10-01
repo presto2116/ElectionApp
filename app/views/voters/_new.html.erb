@@ -1,0 +1,36 @@
+<!-- New voter Form Modal Partial -->
+
+<div class="modal-dialog">
+  <div class="modal-content">
+  	<div class="modal-header">
+      <h3><%= "New Voter" %></h3>
+    </div>
+    <%= form_for @voter, remote: true, html: {style: "display:inline;" } do |f| %>
+	    <div class="modal-body">
+	      <ul class="errors"></ul>
+	      <div class="row">
+		      <div class="col-sm-3 modal-label">
+		        <p><%= f.label :first_name %>:</p>
+		        <p><%= f.label :last_name %>:</p>
+		        <p><%= f.label :address %>:</p>
+		        <p><%= f.label :city %>:</p>
+		        <p><%= f.label :state %>:</p>
+		        <p><%= f.label :zip %>: </p>
+		      </div>
+		      <div class="col-sm-6">
+			      <p><%= f.text_field :first_name, size: 25 %></p>
+			      <p><%= f.text_field :last_name, size: 25 %></p>
+			      <p><%= f.text_field :address, size: 25 %></p>
+			      <p><%= f.text_field :city, size: 25 %></p>
+			      <p><%= f.text_field :state, size: 3 %></p>
+			      <p><%= f.text_field :zip, size: 5 %></p>
+		      </div>
+	    	</div>
+	    </div>
+	    <div class="modal-footer">
+	      <%= f.submit class: "btn btn-success" %>
+	      <%= link_to "Cancel", "#", class: "btn btn-danger", data: {dismiss: "modal"} %>
+	    </div>
+    <% end %>
+  </div>
+</div>

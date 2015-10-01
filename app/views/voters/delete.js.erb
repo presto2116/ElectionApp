@@ -1,0 +1,4 @@
+// When delete button is clicked, show the delete modal partial for given voter
+
+	$("#voter-modal").html("<%= escape_javascript(render 'delete') %>");
+	$("#voter-modal").modal("show");

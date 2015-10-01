@@ -1,0 +1,12 @@
+<!-- Individual voter information page-->
+  <h1><%= @voter.first_name %> <%= @voter.last_name %></h1>
+
+  <p>Address: <%= @voter.address %></p>
+
+  <p>City: <%= @voter.city %></p>
+
+  <p>State: <%= @voter.state %></p>
+
+  <p>Zip: <%= @voter.zip %></p>
+
+  <%= link_to 'Back', voters_path, :class => "btn btn-default" %>

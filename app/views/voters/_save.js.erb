@@ -1,0 +1,13 @@
+//runs after every modal is submitted. 
+// If error, append error to modal
+// if success, hide modal and render index partial
+
+$("ul.errors").html("");
+<% if @voter.errors.any? %>
+  <% @voter.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"));
+  <% end %>
+<% else %>
+  $(".voter-index").html("<%= escape_javascript(render 'index') %>");
+  $("#voter-modal").modal("hide");
+<% end %>
